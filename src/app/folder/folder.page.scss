@@ -1,0 +1,47 @@
+ion-menu-button {
+  color: var(--ion-color-primary);
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+/* tu-componente.page.scss */
+.separador {
+  width: 100%;
+  height: 1px; /* Altura de la línea horizontal */
+  background-color: #ccc; /* Color de la línea horizontal */
+  margin-top: 10px; /* Espacio superior opcional */
+  margin-bottom: 10px; /* Espacio inferior opcional */
+}
+
+/* tu-componente.page.scss */
+.bottom-half {
+  height: 50vh; /* Ajusta la altura según tus necesidades */
+  background-color: #00fff2; /* Color de fondo para visualización */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

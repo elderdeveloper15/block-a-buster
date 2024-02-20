@@ -1,0 +1,7 @@
+{
+  "name": "Block-A-Buster",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

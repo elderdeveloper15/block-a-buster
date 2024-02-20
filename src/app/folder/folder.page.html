@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button (click)="onButtonClick()" [disabled]="isButtonDisabled" *ngIf="showButton">Start</ion-button>
+
+  <ion-content>
+    <div style="height: 50%; border-bottom: 1px solid black; display: flex; align-items: center; justify-content: center;">
+      <p style="text-align: center; width: 100%;">{{ textoSeleccionado }}</p>
+    </div>
+    <ion-button expand="full" style="height: 50%;" (click)="resetTimer()">{{ counter }}</ion-button>
+  </ion-content>
+  
+  
+  
+
+</ion-content>
