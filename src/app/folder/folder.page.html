@@ -12,9 +12,9 @@
 
   <ion-content>
     <div style="height: 50%; border-bottom: 1px solid black; display: flex; align-items: center; justify-content: center;">
-      <p style="text-align: center; width: 100%;">{{ textoSeleccionado }}</p>
+      <p style="text-align: center; width: 100%; font-size: 40px;">{{ textoSeleccionado }}</p>
     </div>
-    <ion-button expand="full" style="height: 50%;" (click)="resetTimer()">{{ counter }}</ion-button>
+    <ion-button expand="full" style="height: 50%; font-size: 40px;" (click)="resetTimer()" [disabled]="!isCounterActive">{{ counter }}</ion-button>
   </ion-content>
   
   
