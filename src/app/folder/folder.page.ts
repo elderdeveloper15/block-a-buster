@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component,ChangeDetectorRef, inject, OnInit } from '@angular/core';
 import { Observable, timer, Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
@@ -17,7 +17,7 @@ export class FolderPage implements OnInit {
   textoSeleccionado: string = '';
 
 
-  constructor() {
+  constructor(private changeDetector: ChangeDetectorRef) {
 
   }
 
@@ -29,9 +29,10 @@ export class FolderPage implements OnInit {
 
   onButtonClick() {
     this.seleccionarTextoAleatorio();
-    this.startTimer();
+    this.resetTimer();
     this.isButtonDisabled = true;
     this.showButton = false;
+    this.changeDetector.detectChanges();
   }
 
   seleccionarTextoAleatorio() {
@@ -49,6 +50,7 @@ export class FolderPage implements OnInit {
         this.timerSubscription.unsubscribe();
         this.isButtonDisabled = false;
         this.showButton = true;
+        this.changeDetector.detectChanges();
       }
     });
   }
