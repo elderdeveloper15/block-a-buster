@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'completame.esta.v1',
   appName: 'Block-A-Buster',
   webDir: 'www',
   server: {
